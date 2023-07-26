@@ -4,13 +4,13 @@ const port= process.env.prot ||8000;
 const cookie = require('cookie');
 const cookieParser = require('cookie-parser');
 const app = express();
-
+const morgan = require('morgan');
 
 require('./config/db');
 
 require('dotenv').config()
 app.use(cookieParser())
-
+app.use(morgan('dev'))
 const cors= require('cors');
 app.use(cors());
 
