@@ -18,6 +18,7 @@ app.use(cors());
 app.use(express.urlencoded({extended:true}));
 
 app.use('/user',require('./router/user.router'))
+app.use('/admin',require('./router/admin.router'))
 
 
 app.listen(port,(err)=>{
